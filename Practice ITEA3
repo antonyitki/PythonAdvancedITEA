@@ -1,0 +1,21 @@
+from time import time
+from random import randint
+
+
+def decor_1 (call_number=2):
+    def decor_2(func):
+        def snickers():
+            for i in range(call_number):
+                initial_time = time()
+                time_execute = time() - initial_time
+                print(f'Function {func.name}() executed {i + 1} time in {time_execute}')
+                return result
+        return snickers
+    return decor_2
+
+
+@decor_1(4)
+def my_func():
+    return print("Hello PEP8")
+    
+    
