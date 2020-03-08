@@ -1,0 +1,46 @@
+class Person:
+    def __init__(self, dob, name, glasses):
+        self.age = 2020-int(dob)
+        self.name = name
+        self.glasses = False
+
+    def glasses(self):
+        g = input("Write 1 for true and 0 for false about wear glasses")
+        if g == 1:
+            self.glasses = True
+
+    def __str__(self):
+        if self.glasses == False:
+            return print(f"{self.name} is {self.age} years old and has NO glasses")
+        else:
+            return print(f"{self.name} is {self.age} years old and has  glasses")
+
+
+anton = Person(1987, "Anton", 0)
+masha = Person(2002, "Masha", 0)
+pasha = Person(1980, "Pavel", 1)
+anton.__str__()
+masha.__str__()
+pasha.__str__()
+
+
+class Abituren(Person):
+    super().__init__(Person(), self.surname, self.school)
+    self.surname = surname
+    self.school = school
+
+
+class Student(Person):
+    super().__init__(self.dob, self.name, self.glasses, self.surname, self.school, self.school_level)
+    self.surname= surname
+    self.school = school
+    self.school_level = school_level
+
+
+class Teacher(Person):
+    super().__init__(Person)
+    __init__(self.surname, self.school, self.work, self.level_work)
+
+
+teacherivan = Teacher(1964, "Ivan", 0)
+print(teacherivan)
