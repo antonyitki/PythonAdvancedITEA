@@ -18,3 +18,36 @@ print(Shop.all_sales)
 
 #------------------------------------------------------------------------
 
+class Point:
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def see_point(self):
+        return self.x, self.y, self.z
+
+    def __add__(self, other):
+        return self.x + other.x, self.y + other.y, self.z + other.z
+
+    def __sub__(self, other):
+        return self.x - other.x, self.y - other.y, self.z - other.z
+
+    def __mul__(self, other_point):
+        return self.x * other_point.x, self.y * other_point.y, self.z * other_point.z
+
+    def __truediv__(self, other):
+        return self.x / other.x, self.y / other.y, self.z / other.z
+
+
+
+p1 = Point(1,2,3)
+print(p1.see_point())
+p2 = Point(5,5,5)
+print(p2.see_point())
+print(p1.__add__(p2))
+print(p1.__sub__(p2))
+print(p1.__mul__(p2))
+print(p2.__truediv__(p1))
+p3 = Point(9,8,7)
+print(p3.see_point())
