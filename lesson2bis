@@ -1,0 +1,20 @@
+class Shop:
+    all_sales = 0
+
+    def __init__(self, name_shop, total_sales):
+        self.name_shop = name_shop
+#       self.total_sales = total_sales
+        Shop.all_sales += total_sales
+
+    def total(self, sales):
+        self.total_sales += sales
+
+
+atb1 = Shop("atbleviybereg", 1000)
+atb2 = Shop("atbpraviybereg", 156)
+atb3 = Shop('atbpraviyobolon', 99)
+print(Shop.all_sales)
+
+
+#------------------------------------------------------------------------
+
