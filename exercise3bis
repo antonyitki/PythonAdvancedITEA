@@ -1,0 +1,20 @@
+import time
+def simple_decorator(*args):
+    def decorator(f):
+            def wrapper(*args, **kwargs):
+                start = time.time()
+                r = f(*args, *kwargs)
+                time.sleep(3)
+                t_time = time.time() - start
+                print(t_time)
+                return (f(*args, *kwargs))
+            return wrapper
+    return decorator
+
+
+@simple_decorator()
+def example_func(n):
+    print("I am student!\n"*n)
+
+print(example_func(5))
+
