@@ -1,0 +1,57 @@
+from abc import ABC, abstractmethod
+
+class Person:
+
+    def __init__(self, born_year, surname, school):
+        self.born_year = born_year
+        self.surname = surname
+        self.school = school
+
+    @abstractmethod
+    def age(self):
+        age = 2020 - self.born_year
+        return str(age)
+
+#    @abstractmethod
+#    def info(self):
+#        return information_person
+
+
+class Abituren(Person):
+    def __init__(self, surname, born_year, school):
+        super().__init__(born_year, surname, school)
+
+    def __str__(self):
+        return self.surname + "\n" + self.school + "\n" + self.age()
+
+
+class Student(Person):
+    def __init__(self, surname, born_year, school, st_level):
+        super().__init__(born_year,surname, school)
+        self.st_level = st_level
+
+    def __str__(self):
+        return self.surname + "\n" + self.school + "\n" + str(self.st_level) + "\n" + self.age()
+
+
+class Teacher(Person):
+    def __init__(self, surname, born_year, school, position, teach_level):
+        super().__init__(born_year, surname, school)
+        self.position = position
+        self.teach_level = teach_level
+
+    def __str__(self):
+        return self.surname + "\n" + self.school + "\n" + str(self.teach_level) + "\n" + self.age() + "\n" + self.position
+
+
+
+me = Student("oliver", 1987, "Itea", 2)
+print(me)
+me1 = Abituren("tata", 1986, "SuperItea")
+print(me1)
+me2 = Teacher("kaslov",2000, "Cyberitea", "manager", 3)
+print(me2)
+
+a = int(input("Which age do you want? "))
+while self.age >= a:
+    print(self.surname)
