@@ -1,0 +1,30 @@
+import time
+
+
+class Registration:
+    def __init__(self, login_name, login_password):
+        self.login_name = login_name
+        self.login_password = login_password
+
+
+class Authorization(Registration):
+    def validation(self):
+        if len(self.login_password) >= 8:
+            return True
+        else:
+            print("Wrong password.")
+
+
+class User:
+    def standard(self, text_post):
+        def write_post():
+            print(time.time())
+            return self.text_post
+
+
+class Administrator(User):
+    pass
+
+
+anton = Registration("tony", 123)
+print(anton)
